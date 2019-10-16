@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+
+    <CheckBox
+        android:id="@+id/defaultDCIM"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="默认相册（DCIM）"
+        android:checked = "true"/>
+    <CheckBox
+        android:id="@+id/defaultWechat"
+        android:checked="true"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="微信目录"/>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp" 
+        android:hint="输入服务器地址"
+        android:layout_marginTop = "5dp"
+        android:text=""
+        android:id="@+id/ftpUrl"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp" 
+        android:hint="输入用户名"
+        android:text=""
+        android:id="@+id/ftpUser"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp" 
+        android:hint="输入密码"
+        android:password="true"
+        android:id="@+id/password"/>
+    <CheckBox
+        android:id="@+id/deleteByBackup"
+        android:checked="false"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="备份成功后删除本地文件"
+    android:layout_marginTop = "20dp"/>
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#2A3E50"
+        android:textColor="#fff"
+        android:text="搜索并备份"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:max="100"
+        android:progress="0"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:visibility="invisible">
+        </ProgressBar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/holdingTextScroller"
+        android:scrollbars="vertical">
+        <TextView
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:id="@+id/holdingMessageText"/>
+    </ScrollView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/textScroller"
+        android:scrollbars="vertical">
+        
+        <TextView
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:id="@+id/messageText"/>
+    </ScrollView>
+    
+    
+
+
+</TableLayout>
